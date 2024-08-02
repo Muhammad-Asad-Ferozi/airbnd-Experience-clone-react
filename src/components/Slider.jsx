@@ -13,13 +13,13 @@ export default function Slider() {
     }
     
     function turnRight() {
-        if (status < data.length - 3) {
+        if (status < data.length - 2) {
             setStatus(status + 1);
         }
     }
 
     const cards = data.map((item, index) => <Card key={index} {...item} />);
-    const visibleCards = cards.slice(status, status + 3);
+    const visibleCards = cards.slice(status, status + 2);
   return (
     <div className=" relative ">
       <div className="flex items-start justify-evenly overflow-hidden">
